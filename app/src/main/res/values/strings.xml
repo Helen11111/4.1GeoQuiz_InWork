@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+
+    <string name="name_app">Викторина\nпо\nгеографии</string>
+
+    <string name="quest1">На каком материке находится Бразилия?</string>
+    <string name="quest2">Какая страна самая большая в мире?</string>
+    <string name="quest3">Как называется место, где река впадает в другую реку, озеро или море?</string>
+    <string name="quest4">В это озеро нашей страны впадает множество рек, а вытекает из него только одна - Ангара?</string>
+    <string name="quest5">Столица какой страны расположена на реке Нил?</string>
+
+    <string name="text_btn1">Южная Америка</string>
+    <string name="text_btn2">Северная Америка</string>
+    <string name="text_btn3">Африка</string>
+    <string name="text_btn4">Азия</string>
+
+
+    <string name="text_btn5">Австралия</string>
+    <string name="text_btn6">Канада</string>
+    <string name="text_btn7">США</string>
+    <string name="text_btn8">Россия</string>
+
+    <string name="text_btn9">Исток</string>
+    <string name="text_btn10">Русло</string>
+    <string name="text_btn11">Половодье</string>
+    <string name="text_btn12">Устье</string>
+
+    <string name="text_btn13">Байкал</string>
+    <string name="text_btn14">Селигер</string>
+    <string name="text_btn15">Ладожское</string>
+    <string name="text_btn16">Виктория</string>
+
+    <string name="text_btn17">Египет</string>
+    <string name="text_btn18">Франция</string>
+    <string name="text_btn19">Индия</string>
+    <string name="text_btn20">Казахстан</string>
+
+
+    <string name="correct_toast">Верно!</string>
+    <string name="incorrect_toast">Не верно!</string>
+
+    <string name="button_start">Start</string>
+
+
+</resources>
