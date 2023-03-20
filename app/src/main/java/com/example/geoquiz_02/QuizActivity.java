@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -57,6 +58,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         setContentView(R.layout.activity_quiz);
 
         txtView = findViewById(R.id.txt_1);
@@ -136,14 +139,43 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void updateQuestion() {
+        int questionTextResID = questionsBank[currentIndex].textResID;
+        txtView.setText(questionTextResID);
+        int questionImageResID = questionsBank[currentIndex].imgResID;
+        imgView.setImageResource(questionImageResID);
 
     }
 
     private void updateAnswer() {
+        int answer1ResID = answerBank[currentIndex].txtBtn1;
+        int answer2ResID = answerBank[currentIndex].txtBtn2;
+        int answer3ResID = answerBank[currentIndex].txtBtn3;
+        int answer4ResID = answerBank[currentIndex].txtBtn4;
+        btn1.setText(answer1ResID);
+        btn1.setText(answer2ResID);
+        btn1.setText(answer3ResID);
+        btn1.setText(answer4ResID);
 
     }
 
     private void startQuiz() {
+        txtTimer.setText("" + (millisUntilFinished / 1000) + "sec");
+        txtPoints.setText("" + points);
+
+        countDownTimer = new CountDownTimer(millisUntilFinished, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                txtTimer.setText("" + (millisUntilFinished / 1000) + "sec");
+            }
+
+            @Override
+            public void onFinish() {
+                btn1.setClickable(false);
+                btn2.setClickable(false);
+                btn3.setClickable(false);
+                btn4.setClickable(false);
+            }
+        }.start();
 
     }
 
